@@ -1,0 +1,35 @@
+---
+title: "Day 4 Tasks"
+author: "Elise Gonzales"
+date: "2022-08-04"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(skimr)
+library(GGally)
+
+```
+
+```{r}
+names(diamonds)
+dim(diamonds)
+summary(diamonds)
+head(diamonds)
+tail(diamonds)
+skimr::skim(diamonds)
+
+GGally::ggpairs(data = diamonds)
+
+ggplot(data = diamonds, aes(x = price, y = carat)) + geom_scatter
+
+
+
+```
+
+Create a histogram showing the distribution of values in the carat column (recall: a histogram only requires a single variable, e.g. aes(x = carat))
+Save, stage, commit, pull, then push your changes back to your repo in RStudio using the GUI interface (buttons)
+Create a jitterplot (see: geom_jitter) of diamond clarity (on the x-axis) and price (y-axis).
+Using git commands in the Terminal, stage, commit, & push changes
